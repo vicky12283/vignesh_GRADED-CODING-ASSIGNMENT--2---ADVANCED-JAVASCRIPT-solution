@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume</title>
+    <link rel="stylesheet" href="Resume.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body onload="searchValue('')">
+    
+    <section id="options">
+        <button id="previous" onclick="searchValue('previous')">Previous</button>
+        <input type="search" name="search" id="search" onchange="searchValue('')" placeholder="search for keywords to filter the resumes">
+        <button id="next" onclick="searchValue('next')">Next</button>
+    </section>
+    
+    <div id="error">
+        <i class="fas fa-frown" style="font-size: 100px"></i>
+        <p>No such results found</p>
+    </div>
+
+    <section id="structure">
+        <!-- 1. Name
+        2. Designation -->
+        <!-- <section id="Header">-->
+        <section id="Header">
+        </section>
+        
+        <section id="MainPage">
+            
+            <!-- 
+            1. Contact
+            2. Technical Skills
+            3. Hobbies -->
+            <section id="leftPage"></section>
+            
+            <!-- 
+            1. Work Experience
+            2. Projects
+            3. Education
+            4. Achievements -->
+            <section id="coreDetails">
+                
+                <!-- 1. Work Experience -->
+                <article class="workExp" >
+                    <h4>Work Experience in previous company</h4>
+                    <ul class="coredetailsList" id="workDates">
+                    </ul>
+                </article>
+
+                <!-- 2. Projects -->
+                <article class="workExp">
+                    <h4>Projects</h4>
+                    <ul class="coredetailsList" id="projects">
+                    </ul>
+                </article>
+
+                <!-- 3. Education -->
+                <article class="workExp">
+                    <h4>Education</h4>
+                    <ul class="coredetailsList" id="education">
+                    </ul>
+                </article>
+
+                <article class="workExp">
+                    <h4>Internship</h4>
+                    <ul class="coredetailsList" id="internship">
+                    </ul>
+                </article>
+
+                <!-- 4. Achievements -->
+                <article class="workExp">
+                    <h4>Achievements</h4>
+                    <ul class="coredetailsList" id="achievements">
+                    </ul>
+                </article>
+            </section>
+        </section>
+    </section>
+    <script src="Resume.js" type="text/javascript"></script>
+</body>
+</html>
